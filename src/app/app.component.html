@@ -1,0 +1,21 @@
+<!-- <app-navbar></app-navbar> -->
+
+<!-- <mat-grid-list cols="4" rowHeight="70px" [gutterSize]='0' style='z-index: 10; width: 100%;'>
+  <mat-grid-tile [colspan]="4" [rowspan]="1" [style.background]="'lightblue'">
+    HEADER
+  </mat-grid-tile>
+</mat-grid-list> -->
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side"><app-left-nav></app-left-nav></mat-sidenav>
+  <mat-sidenav opened mode="side" position="end"><app-right-nav></app-right-nav></mat-sidenav>
+  Implicit main content
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
+
+  <!-- <router-outlet></router-outlet> -->
+<!-- <mat-grid-list cols="4" rowHeight="70px" [gutterSize]='0'>
+  <mat-grid-tile [colspan]="4" [rowspan]="1" [style.background]="'lightblue'">
+    FOOTER
+  </mat-grid-tile>
+</mat-grid-list> -->
