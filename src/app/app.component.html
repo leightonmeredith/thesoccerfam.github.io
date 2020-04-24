@@ -1,12 +1,15 @@
 <app-navbar></app-navbar>
 
-<mat-sidenav-container style="height: 900px; z-index: 0;">
+<mat-sidenav-container style="z-index: 0;">
   <mat-sidenav opened mode="side">
     <app-left-nav></app-left-nav>
   </mat-sidenav>
   <mat-sidenav opened mode="side" position="end">
-    <app-right-nav></app-right-nav>
+    <div style='padding: 35px;'>
+      <app-right-nav></app-right-nav>
+    </div>
   </mat-sidenav>
+
   <router-outlet></router-outlet>
 </mat-sidenav-container>
 

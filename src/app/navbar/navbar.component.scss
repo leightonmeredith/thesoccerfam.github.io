@@ -8,5 +8,25 @@ mat-toolbar {
     position: fixed;
     height: var(--default-height);
     z-index: 1;
+    background-color: #036;
+  }
+
+  .custom-toolbar {
+    padding: 40px;
+    font-style: italic; 
+    font-weight: 600; 
+    font-family: Chalkduster, fantasy;
+  }
+
+  .menu {
+    cursor: pointer;
+    font-family: monospace;
   }
   
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .menu-spacer {    
+    padding: 20px;
+  }

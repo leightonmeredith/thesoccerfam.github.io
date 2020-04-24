@@ -1,8 +1,18 @@
-.icon-padding {
+.icon-styling {
     cursor: pointer;
+    color: black;
     padding: 0px 20px 0px 25px;
 }
 
 .breakpoint-padding {
     padding: 10px;
+}
+
+.fixed {
+    top: 0;
+    right: 0;
+    // left: 0;
+    position: fixed;
+    height: var(--default-height);
+    z-index: 1;
 }
