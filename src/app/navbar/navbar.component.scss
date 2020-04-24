@@ -1,0 +1,16 @@
+mat-toolbar {
+    --default-height: 50px;
+  }
+  
+  mat-toolbar[color="primary"] {
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: var(--default-height);
+    z-index: 1;
+  }
+  
+//   mat-toolbar[color="warn"] {
+//     position: sticky;
+//     top: var(--default-height);
+//   }
