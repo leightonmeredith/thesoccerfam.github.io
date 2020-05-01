@@ -7,6 +7,10 @@ import { MatCardModule } from "@angular/material/card";
 import { MatDialogModule } from "@angular/material/dialog";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {MatSidenavModule} from '@angular/material/sidenav';
+// import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { CarouselModule } from "ngx-owl-carousel-o";
+
+//TODO: Cleanup imports below. I don't need all these imports!!!
 
 // import {NgModule} from '@angular/core';
 import {A11yModule} from '@angular/cdk/a11y';
@@ -95,6 +99,9 @@ import { ContactComponent } from './contact/contact.component';
     MatSidenavModule,
     MatButtonModule,
     MatTableModule,
+    CarouselModule,
+
+    // TODO: REmove below SOON
 
     A11yModule,
     ClipboardModule,
