@@ -23,7 +23,7 @@ export class FamilyComponent implements OnInit {
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
-    navText: ['', ''],
+    navText: ['TODO:ADD LEFT IMG', 'TODO:ADD RIGHT IMG'],
     responsive: {
       0: { items: 1 },
       400: { items: 2 },
@@ -58,49 +58,65 @@ export class FamilyComponent implements OnInit {
           "id": 1,
           "name": "M",
           "img": "/assets/m.jpg",
-          "desc": "M is heavy!"
+          "desc": "M has the headphones!",
+          "team":"Manchester United",
+          "country":"Jamaica"
         },
         {
           "id": 2,
           "name": "Nah",
           "img": "/assets/nah.jpg",
-          "desc": "Nah has Napoleon complex!"
+          "desc": "Nah has Napoleon complex!",
+          "team":"Chelsea",
+          "country":"Ethiopia"
         },
         {
           "id": 3,
           "name": "Pros",
           "img": "/assets/pros.jpg",
-          "desc": "Pros is fat!"
+          "desc": "Pros is fat!",
+          "team":"Arsenal",
+          "country":"Dominica"
         },
         {
           "id": 4,
           "name": "B",
           "img": "/assets/b.jpg",
-          "desc": "B is ugly!"
+          "desc": "B is ugly!",
+          "team":"Arsenal",
+          "country":"Jamaica"
         },
         {
           "id": 5,
           "name": "Marvo",
           "img": "/assets/marvo.jpg",
-          "desc": "Marvo is an asshole"
+          "desc": "Marvo is an asshole!",
+          "team":"Chelsea",
+          "country":"Kenya"
         },
         {
           "id": 6,
           "name": "KG",
           "img": "/assets/kg.jpg",
-          "desc": "KG is insecure"
+          "desc": "KG is insecure!",
+          "team":"Chelsea",
+          "country":"Unknown"
         },
         {
           "id": 7,
           "name": "Bazzy",
           "img": "/assets/bazzy.jpg",
-          "desc": "Bazzy needs help"
+          "desc": "Bazzy needs help!",
+          "team":"Arsenal",
+          "country":"Côte d'Ivoire"
         },
         {
           "id": 8,
           "name": "Akan",
           "img": "/assets/akan.jpg",
-          "desc": "Akan is weird"
+          "desc": "Akan is weird!",
+          "team":"Arsenal",
+          "country":"IDK"
         }
       ]
     )
