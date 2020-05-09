@@ -1,23 +1,14 @@
 .center-image {
-    padding: 300px;
-    // background-image: url("../../assets/family.jpg");    
-    // background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    height: 350px;
 }
-
-
 
 table {
     width: 100%;
 }
 
-.example-button-row button,
-.example-button-row a {
-    margin-right: 8px;
-}
-
 .main-content-style {
     padding: 50px;
-    // background-image: url("../../assets/water.jpg");
 }
