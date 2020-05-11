@@ -1,15 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatTableModule } from "@angular/material/table";
-import { MatButtonModule } from "@angular/material/button";
-import { MatCardModule } from "@angular/material/card";
-import { MatDialogModule } from "@angular/material/dialog";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import {MatSidenavModule} from '@angular/material/sidenav';
-// import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { CarouselModule } from "ngx-owl-carousel-o";
-
 //TODO: Cleanup imports below. I don't need all these imports!!!
 
 // import {NgModule} from '@angular/core';
@@ -57,18 +45,32 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 
 
+//TODO: End cleanup
 
 
 
 
 
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from "@angular/material/table";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { MatDialogModule } from "@angular/material/dialog";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { CarouselModule } from "ngx-owl-carousel-o";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { TemplateComponent } from './template/template.component';
-import { FormsModule } from '@angular/forms';
 import { RightNavComponent } from './right-nav/right-nav.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -100,8 +102,9 @@ import { ContactComponent } from './contact/contact.component';
     MatButtonModule,
     MatTableModule,
     CarouselModule,
+    HttpClientModule,
 
-    // TODO: REmove below SOON
+    // TODO: REmove below
 
     A11yModule,
     ClipboardModule,
@@ -146,6 +149,7 @@ import { ContactComponent } from './contact/contact.component';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
+    //TODO: End Cleanup
 
 
 

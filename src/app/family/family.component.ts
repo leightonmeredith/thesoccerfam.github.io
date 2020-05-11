@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { of, Observable } from 'rxjs';
+import { FamilyRepoService } from '../service/family-repo.service';
+import { IFamily } from './family.model';
 
 @Component({
   selector: 'app-family',
@@ -10,9 +12,16 @@ export class FamilyComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
-  family$: Observable<any>;
-  family: any;
-  selectedMember: any = { id: 0 };
+  family$: Observable<IFamily[]>;
+  family: IFamily[] = [];
+  selectedMember: IFamily = {
+    id: 0,
+    country: '',
+    desc: '',
+    img: '',
+    name: '',
+    team: ''
+  };
 
   customOptions: any = {
     loop: true,
@@ -30,93 +39,22 @@ export class FamilyComponent implements OnInit {
     },
   }
 
-  constructor() { }
+  constructor(private familyRepo: FamilyRepoService) { }
 
   ngOnInit(): void {
-    this.getFamily().subscribe(result => {
+    this.family$ = this.familyRepo.getAll();
+
+    this.family$.subscribe(result => {
       this.family = result;
-      console.log(result)
-    });
+    })
   }
 
-  getBio(member: any) {
+  getBio(member: IFamily) {
     this.family.forEach(element => {
       if (element.id === member.id) {
         this.selectedMember = element;
       }
     });
 
-  }
-
-  getFamily() {
-
-    return of(
-      [
-        {
-          "id": 1,
-          "name": "M",
-          "img": "/assets/m.jpg",
-          "desc": "M has the headphones!",
-          "team":"Manchester United",
-          "country":"Jamaica"
-        },
-        {
-          "id": 2,
-          "name": "Nah",
-          "img": "/assets/nah.jpg",
-          "desc": "Nah has Napoleon complex!",
-          "team":"Chelsea",
-          "country":"Ethiopia"
-        },
-        {
-          "id": 3,
-          "name": "Pros",
-          "img": "/assets/pros.jpg",
-          "desc": "Pros is fat!",
-          "team":"Arsenal",
-          "country":"Dominica"
-        },
-        {
-          "id": 4,
-          "name": "B",
-          "img": "/assets/b.jpg",
-          "desc": "B is ugly!",
-          "team":"Arsenal",
-          "country":"Jamaica"
-        },
-        {
-          "id": 5,
-          "name": "Marvo",
-          "img": "/assets/marvo.jpg",
-          "desc": "Marvo is an asshole!",
-          "team":"Chelsea",
-          "country":"Kenya"
-        },
-        {
-          "id": 6,
-          "name": "KG",
-          "img": "/assets/kg.jpg",
-          "desc": "KG is insecure!",
-          "team":"Chelsea",
-          "country":"Antigua"
-        },
-        {
-          "id": 7,
-          "name": "Bazzy",
-          "img": "/assets/bazzy.jpg",
-          "desc": "Bazzy needs help!",
-          "team":"Arsenal",
-          "country":"Côte d'Ivoire"
-        },
-        {
-          "id": 8,
-          "name": "Akan",
-          "img": "/assets/akan.jpg",
-          "desc": "Akan is weird!",
-          "team":"Arsenal",
-          "country":"Nigeria"
-        }
-      ]
-    )
   }
 }

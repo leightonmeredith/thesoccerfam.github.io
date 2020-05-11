@@ -1,6 +1,6 @@
 <section>
 
-
+<div *ngIf='family'>
   <owl-carousel-o [options]="customOptions">
     <ng-template *ngFor="let member of family" carouselSlide>
       <div (click)="getBio(member)" style="max-height: 350px;">
@@ -8,7 +8,7 @@
       </div>
     </ng-template>  
   </owl-carousel-o>
-
+</div>
 
   Find out all you need to know about the soccer family. 
   Click the Family member to see their detailed bio! 
