@@ -98,7 +98,7 @@ export class FamilyComponent implements OnInit {
           "img": "/assets/kg.jpg",
           "desc": "KG is insecure!",
           "team":"Chelsea",
-          "country":"St. Vincent"
+          "country":"Antigua"
         },
         {
           "id": 7,
