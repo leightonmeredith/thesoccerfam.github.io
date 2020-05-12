@@ -1,10 +1,5 @@
-<section class='main-content-style'>
-  <div class='center-image' style='
-    background-repeat: no-repeat;
-  background-attachment: fixed;
-    background-image: url("../../assets/family.jpg");'>
-
-
+<section>
+  <div class='center-image'>
     <mat-card>
       <mat-card-header style="display: block;">
         <mat-card-title>
@@ -16,12 +11,12 @@
       <mat-card-content style="display: block;">
 
         <div style="width: 100%; background-color: #036; color: #036; text-align: right;">Podcast19</div>
-        <form>          
+        <form>
           <br /><br />
           <mat-form-field>
             <mat-label>Email*</mat-label>
             <input matInput placeholder="Email required here" [(ngModel)]='contact.email' name="contactEmail">
-          </mat-form-field>          
+          </mat-form-field>
           <mat-form-field>
             <mat-label>Subject</mat-label>
             <input matInput placeholder="Enter subject here" [(ngModel)]='contact.subject' name='contactSubject'>
@@ -35,7 +30,8 @@
         </form>
       </mat-card-content>
       <mat-card-actions align='end'>
-        <button disabled='disabled' mat-raised-button color="primary" (click)="sendEmail()">TODO: enable sendEmail</button>
+        <button disabled='disabled' mat-raised-button color="primary" (click)="sendEmail()">TODO: enable
+          sendEmail</button>
       </mat-card-actions>
     </mat-card>
   </div>
