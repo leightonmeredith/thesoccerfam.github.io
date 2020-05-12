@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { of, Observable } from 'rxjs';
-import { FamilyRepoService } from '../service/family-repo.service';
+import { FamilyRepoService } from './family-repo.service';
 import { IFamily } from './family.model';
 
 @Component({
@@ -21,7 +21,7 @@ export class FamilyComponent implements OnInit {
     img: '',
     name: '',
     team: ''
-  };
+  }; 
 
   customOptions: any = {
     loop: true,
@@ -42,7 +42,7 @@ export class FamilyComponent implements OnInit {
   constructor(private familyRepo: FamilyRepoService) { }
 
   ngOnInit(): void {
-    this.family$ = this.familyRepo.getAll();
+    this.family$ = this.familyRepo.subscribeToFamily();
 
     this.family$.subscribe(result => {
       this.family = result;

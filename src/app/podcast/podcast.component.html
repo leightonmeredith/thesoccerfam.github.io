@@ -6,7 +6,7 @@
     <h1>Check out our 'the soccer family' stash below</h1>
   </div>
 
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="podcast$ | async" class="mat-elevation-z8">
     <!-- DATE Column -->
     <ng-container matColumnDef="date">
       <th mat-header-cell *matHeaderCellDef> DATE </th>

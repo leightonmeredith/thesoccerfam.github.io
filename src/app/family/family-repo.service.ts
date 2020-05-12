@@ -1,20 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError, of } from 'rxjs';
+import { Observable, throwError, of, BehaviorSubject } from 'rxjs';
 import { tap, catchError } from "rxjs/operators";
-import { IFamily } from '../family/family.model';
+import { IFamily } from './family.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FamilyRepoService {
+  family$: BehaviorSubject<IFamily[]>;
+  private url = 'http://localhost:4200/assets/api/family.json';
 
-  private url = 'http://localhost:4200/assets/family.json'; 
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.initializeFamily();
+  }
 
   getAll(): Observable<IFamily[]> {
-    console.log(this.url)
     return this.http.get<IFamily[]>(this.url)
       .pipe(
         tap(data => {
@@ -22,6 +23,19 @@ export class FamilyRepoService {
         }),
         catchError(this.handleError)
       );
+  }
+
+  initializeFamily(isUpdated?: boolean) {
+    if (!this.family$ || isUpdated) {
+      this.family$ = new BehaviorSubject(new Array<IFamily>()) as BehaviorSubject<IFamily[]>;
+      this.getAll().subscribe(response => {
+        this.family$.next(response);
+      })
+    }
+  }
+
+  subscribeToFamily(): Observable<IFamily[]> {
+    return this.family$.asObservable();
   }
 
   private handleError(err: HttpErrorResponse) {
