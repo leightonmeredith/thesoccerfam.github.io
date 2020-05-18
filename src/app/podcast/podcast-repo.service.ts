@@ -9,7 +9,7 @@ import { IPodcast } from './podcast.model';
 })
 export class PodcastRepoService {
 
-  private url = 'http://localhost:4200/assets/api/podcast.json';
+  private url = 'assets/api/podcast.json';
 
   constructor(private http: HttpClient) { }
 

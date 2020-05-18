@@ -9,7 +9,7 @@ import { IFamily } from './family.model';
 })
 export class FamilyRepoService {
   family$: BehaviorSubject<IFamily[]>;
-  private url = 'http://localhost:4200/assets/api/family.json';
+  private url = 'assets/api/family.json';
 
   constructor(private http: HttpClient) {
     this.initializeFamily();
