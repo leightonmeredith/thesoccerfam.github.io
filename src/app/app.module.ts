@@ -78,6 +78,8 @@ import { PodcastComponent } from './podcast/podcast.component';
 import { FamilyComponent } from './family/family.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -91,7 +93,8 @@ import { LoginComponent } from './login/login.component';
     PodcastComponent,
     FamilyComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -157,7 +160,8 @@ import { LoginComponent } from './login/login.component';
 
 
 
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
