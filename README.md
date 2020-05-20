@@ -17,4 +17,4 @@ Run `npm start` to startup the application. Default port is 4200.
 ### Lessons Learned
 Connect github pages to server instructions [here](https://support.dnsimple.com/articles/github-pages/)
 
-Create CNAME file
+Create CNAME file then run the deploy npm script in package.json
