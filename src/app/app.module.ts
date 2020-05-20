@@ -77,6 +77,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PodcastComponent } from './podcast/podcast.component';
 import { FamilyComponent } from './family/family.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     PodcastComponent,
     FamilyComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
