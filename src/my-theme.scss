@@ -1,8 +1,8 @@
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 
 @include mat-core();
 
-$tsf_blue: (
+$tsf-blue: (
     50: #036,
     100: #036,
     200: #036,
@@ -32,14 +32,50 @@ $tsf_blue: (
         A200: white,
         A400: white,
         A700: white,
-    )
+    ),
 );
 
-$candy-app-primary: mat-palette($mat-indigo);
-$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
-$candy-app-warn:    mat-palette($mat-red);
-$candy-app-primary:    mat-palette($tsf_blue);
+$tsf-yellow: (
+    50: #FB3,
+    100: #FB3,
+    200: #FB3,
+    300: #FB3,
+    400: #FB3,
+    500: #FB3,
+    600: #FB3,
+    700: #FB3,
+    800: #FB3,
+    900: #FB3,
+    A100: #FB3,
+    A200: #FB3,
+    A400: #FB3,
+    A700: #FB3,
+    contrast: (
+        50: white,
+        100: white,
+        200: white,
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: white,
+        A200: white,
+        A400: white,
+        A700: white,
+    ),
+);
+
+// $candy-app-primary: mat-palette($mat-indigo);
+// $candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$candy-app-warn: mat-palette($mat-red);
+$candy-app-accent: mat-palette($tsf-yellow);
+$candy-app-primary: mat-palette($tsf-blue);
 
 $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 
-@include angular-material-theme($candy-app-theme); 
+@include angular-material-theme($candy-app-theme);
+
+$tsf_yellow: #FB3;
