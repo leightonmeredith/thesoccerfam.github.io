@@ -1,0 +1,57 @@
+<mat-sidenav-container class="sidenav-container" style="z-index: 0;">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home">Home</a>
+      <a mat-list-item routerLink="/podcast">Podcast</a>
+      <a mat-list-item routerLink="/family">Family</a>
+      <a mat-list-item routerLink="/contact">Contact</a>
+      <a mat-list-item routerLink="/login">Login</a>
+    </mat-nav-list>
+    <br />
+    <a target="_blank" title="Podcast" href="https://www.patreon.com/thesoccerfamily">
+      <i class="fas fa-podcast fa-lg icon-styling"></i></a>
+    <a target="_blank" title="Instagram" href="https://www.instagram.com/the.soccer.family/">
+      <i class="fab fa-instagram fa-lg icon-styling"></i></a>
+    <a target="_blank" title="Youtube" href="https://www.youtube.com/channel/UCNcOHahj8-xYRQI_ElWhq8Q">
+      <i class="fab fa-youtube fa-lg icon-styling"></i></a>
+    <a target="_blank" title="Facebook" href="https://www.facebook.com/TheSoccerFam/">
+      <i class="fab fa-facebook fa-lg icon-styling"></i></a>
+    <br />
+    <a target="_blank" title="Github" href="https://github.com/leightonmeredith/the-soccer-family">
+      <i class="fab fa-github fa-lg icon-styling"></i></a>
+    <a target="_blank" title="Twitter" href="https://twitter.com/thesoccerfam">
+      <i class="fab fa-twitter fa-lg icon-styling"></i></a>
+    <a target="_blank" title="Email" href="mailto:thesoccerfamily1@gmail.com">
+      <i class="far fa-envelope-open fa-lg icon-styling"></i></a>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <i class="fas fa-bars fa-2x"></i>
+      </button>
+      <!-- <span>tsf</span> -->
+      <app-header *ngIf="(isHandset$ | async) === false"></app-header>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <div [ngStyle]="{'padding': (isHandset$ | async) ? '0px':'80px'}">
+      <ng-content></ng-content>
+    </div>
+
+    <mat-sidenav opened mode="side" *ngIf="(isHandset$ | async) === false">
+      <div style="padding: 30px;">
+        <app-left-nav></app-left-nav>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav opened mode="side" position="end" *ngIf="(isHandset$ | async) === false">
+      <div style='padding: 35px;'>
+        <app-right-nav></app-right-nav>
+      </div>
+    </mat-sidenav>
+
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

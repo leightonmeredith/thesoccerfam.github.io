@@ -1,0 +1,25 @@
+@import "src/my-theme.scss";
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: $tsf_yellow;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.icon-styling {
+  color: black;
+  padding: 0px 10px 20px 10px;
+}
