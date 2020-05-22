@@ -35,10 +35,10 @@
       <app-header *ngIf="(isHandset$ | async) === false"></app-header>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <div [ngStyle]="{'padding': (isHandset$ | async) ? '0px':'150px 80px 50px 30px'}">
+    <div [ngStyle]="{'padding': (isHandset$ | async) ? '80px 0px 0px 0px':'150px 80px 50px 30px'}">
       <ng-content></ng-content>
     </div>
-    <app-right-nav></app-right-nav>
+    <app-right-nav *ngIf="(isHandset$ | async) === false"></app-right-nav>
     <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
