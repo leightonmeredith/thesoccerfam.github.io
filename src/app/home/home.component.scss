@@ -1,4 +1,4 @@
-.center-image { 
+.center-image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -10,6 +10,11 @@
     font-size: xx-large;
 }
 
+.notification-space {
+    padding: 20px;
+    background-color: #036;
+    color: #FB3;
+}
 
 table {
     width: 100%;
