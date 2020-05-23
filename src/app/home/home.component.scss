@@ -1,15 +1,24 @@
-.center-image { 
+.center-image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 700px;
     text-align: right;
     background-image: url("../../assets/img/home.jpg");
-    padding: 30px;
-    padding-left: 70%;
+    
     font-size: xx-large;
 }
 
+.center-image-web {
+    padding: 30px;
+    padding-left: 70%;
+}
+
+.notification-space {
+    padding: 20px;
+    background-color: #036;
+    color: #FB3;
+}
 
 table {
     width: 100%;

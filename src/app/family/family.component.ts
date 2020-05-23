@@ -25,12 +25,10 @@ export class FamilyComponent implements OnInit {
 
   customOptions: any = {
     loop: true,
-    nav: true,
     margin: 10,
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
-    navText: ['TODO:ADD LEFT IMG', 'TODO:ADD RIGHT IMG'],
     responsive: {
       0: { items: 1 },
       400: { items: 2 },
