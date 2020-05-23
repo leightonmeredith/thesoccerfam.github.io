@@ -1,5 +1,5 @@
 <section>
-  <div class='center-image'>
+  <div class='center-image' [ngClass]="{'center-image-web': (isHandset$ | async) === false}">
     <br /><br />
     <a target="_blank" style=" font-family: 'Source Sans Pro';"
       href="https://www.patreon.com/posts/kdb-world-class-33102493">

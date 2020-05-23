@@ -12,10 +12,14 @@
   }
 
   .custom-toolbar {
-    padding: 160px;
+    padding: 100px 0 100px 50px;
     font-style: italic; 
     font-weight: 600; 
     font-family: Chalkduster, fantasy;
+  }
+
+  .custom-toolbar-web {
+    padding: 160px;
   }
 
   .menu {
