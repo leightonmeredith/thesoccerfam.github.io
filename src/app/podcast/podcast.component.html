@@ -4,7 +4,7 @@
 
   <div style="text-align: center; padding: 10px;">
     <span style="font-family: sans-serif, fantasy; color: #036;">
-      <h1>Check out our 'the soccer family' stash below</h1>
+      <h1>Check out our 'Soccer Family' stash</h1>
     </span>
   </div>
 
@@ -74,7 +74,23 @@
       </td>
     </ng-container>
 
+    <!-- AND MORE.. -->
+    <ng-container matColumnDef="disclaimer">
+      <td mat-footer-cell *matFooterCellDef colspan="4">
+        If you want more stash, check out our 'Soccer Family' archives
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="disclaimer-icon">      
+      <td mat-footer-cell *matFooterCellDef >
+        <a target="_blank" href="https://www.patreon.com/thesoccerfamily">
+          <span>view archives...</span><i class="fas fa-headphones-alt fa-lg icon-styling"></i>
+        </a>
+      </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: #036; padding: 20px;"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <tr mat-footer-row *matFooterRowDef="['disclaimer','disclaimer-icon']" style="font-weight: bold;font-style: italic;"></tr>
   </table>
 </section>
