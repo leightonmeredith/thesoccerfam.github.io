@@ -2,10 +2,10 @@
   <div class='center-image' [ngClass]="{'center-image-web': (isHandset$ | async) === false}">
     <br /><br />
     <a target="_blank" style=" font-family: 'Source Sans Pro';"
-      href="https://www.patreon.com/posts/racism-in-world-38106380">
+      href="{{podcast != undefined? podcast.url: ''}}">
       <div class="notification-space">
         <span style="font-family: sans-serif, fantasy;">
-          Racism in the world and the impact on soccer
+          {{podcast != undefined? podcast.headline: ''}}
         </span>
         <br/>
         <span style="font-family:monospace; font-size: 15px;">...listen now!!</span>
