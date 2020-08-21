@@ -13,7 +13,7 @@ describe('Common', () => {
 
             const result = Common.numberOnly(keyEvent);
 
-            expect(result).toBeTruthy();
+            expect(result).toBeFalsy();
         });
 
         it('should return true when "4" is pressed', () => {
@@ -25,7 +25,7 @@ describe('Common', () => {
 
             const result = Common.numberOnly(keyEvent);
 
-            expect(result).toBeFalsy();
+            expect(result).toBeTruthy();
         })
     })
 })

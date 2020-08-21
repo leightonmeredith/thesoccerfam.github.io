@@ -47,7 +47,7 @@ describe('FamilyRepoService', () => {
     });
   });
 
-  fdescribe('getAll', () => {
+  describe('getAll', () => {
     it('should call get with correct url', () => {
       const mockFamily = mockObj.getDefaultFamilies();
       service.getAll().subscribe((data) => {
