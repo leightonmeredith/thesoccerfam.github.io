@@ -37,6 +37,7 @@ import { AngModule } from 'src/shared/ang.module';
     LayoutModule,
     AppRoutingModule
   ],
+  exports: [AngModule],
   providers: [],
   bootstrap: [AppComponent]
 })

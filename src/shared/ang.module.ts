@@ -10,6 +10,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from "ngx-owl-carousel-o";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -24,6 +27,9 @@ import { CarouselModule } from "ngx-owl-carousel-o";
     MatSidenavModule,
     MatButtonModule,
     MatTableModule,
+    MatToolbarModule,
+    MatListModule,
+    MatFormFieldModule,
     CarouselModule,
     HttpClientModule,
   ]

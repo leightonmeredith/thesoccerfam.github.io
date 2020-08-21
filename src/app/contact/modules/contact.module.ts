@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from '../contact.component';
 import { ContactRoutingModule } from './contact-routing.module';
 import { RouterModule } from '@angular/router';
+import { AngModule } from 'src/shared/ang.module';
 
 
 
@@ -12,6 +13,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    AngModule,
     ContactRoutingModule
   ],
   exports: [RouterModule]
