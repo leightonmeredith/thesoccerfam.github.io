@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { map, shareReplay } from 'rxjs/operators';
+import { HandSetComponent } from 'src/shared/handset.component';
 
 @Component({
   selector: 'app-footer',
@@ -10,13 +9,11 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class FooterComponent implements OnInit {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+  isHandset$: Observable<boolean>;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private handsetComponent: HandSetComponent) {
+    this.isHandset$ = this.handsetComponent.isHandset$;
+  }
 
   ngOnInit(): void {
   }
