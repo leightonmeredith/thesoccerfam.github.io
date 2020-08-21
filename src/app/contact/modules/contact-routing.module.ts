@@ -7,7 +7,7 @@ import { ContactGuard } from './contact.guard';
 const routes: Routes = [
   {
     path: 'contact',
-    canActivate: [ContactGuard],
+    // canActivate: [ContactGuard],
     component: ContactComponent
   }
 ]
