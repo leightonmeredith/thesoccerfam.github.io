@@ -12,17 +12,13 @@ export class FamilyRepoService {
   private url = 'assets/api/family.json';
 
   constructor(private http: HttpClient) {
-    this.initializeFamily();
+    // this.initializeFamily();
   }
 
   getAll(): Observable<IFamily[]> {
-    return this.http.get<IFamily[]>(this.url)
-      .pipe(
-        tap(data => {
-          console.log(data);
-        }),
-        catchError(this.handleError)
-      );
+    return this.http.get<IFamily[]>(this.url).pipe(
+      catchError(this.handleError)
+    );
   }
 
   initializeFamily(isUpdated?: boolean) {
