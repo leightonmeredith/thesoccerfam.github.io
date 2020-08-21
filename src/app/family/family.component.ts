@@ -21,7 +21,7 @@ export class FamilyComponent implements OnInit {
     img: '',
     name: '',
     team: ''
-  }; 
+  };
 
   customOptions: any = {
     loop: true,
@@ -40,11 +40,12 @@ export class FamilyComponent implements OnInit {
   constructor(private familyRepo: FamilyRepoService) { }
 
   ngOnInit(): void {
-    this.family$ = this.familyRepo.subscribeToFamily();
+    this.getFamily();
+    // this.family$ = this.familyRepo.subscribeToFamily();
 
-    this.family$.subscribe(result => {
-      this.family = result;
-    })
+    // this.family$.subscribe(result => {
+    //   this.family = result;
+    // });
   }
 
   getBio(member: IFamily) {
@@ -53,6 +54,11 @@ export class FamilyComponent implements OnInit {
         this.selectedMember = element;
       }
     });
+  }
 
+  getFamily() {
+    this.familyRepo.getAll().subscribe(result => {
+      this.family = result;
+    })
   }
 }

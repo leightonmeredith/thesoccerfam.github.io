@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o port: 4000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && angular-cli-ghpages --branch master"
+    "deploy": "ng build --prod && angular-cli-ghpages --branch master",
+    "gencode": "ng test --code-coverage"
   },
   "private": true,
   "dependencies": {
