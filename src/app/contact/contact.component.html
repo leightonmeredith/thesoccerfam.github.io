@@ -11,28 +11,55 @@
       <mat-card-content style="display: block;">
 
         <div style="width: 100%; background-color: #036; color: #036; text-align: right;">Podcast19</div>
-        <form>
+        <form [formGroup]="contactGroup">
+          <mat-form-field style="width: 40%;">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email@host.com" formControlName='email' name='email'>
+            <mat-hint>Required</mat-hint>
+            <mat-error *ngIf="contactGroup.get('email').hasError('required')">Required</mat-error>
+          </mat-form-field>
+          <span style="padding: 20px;"></span>          
+          <mat-form-field style="width: 40%;">
+            <mat-label>Subject</mat-label>
+            <input matInput placeholder="Enter subject here" formControlName='subject' name='subject'>
+            <mat-hint>Required</mat-hint>
+            <mat-error *ngIf="contactGroup.get('email').hasError('required')">Required</mat-error>
+          </mat-form-field>
+          <br><br>
+          <mat-form-field style="width: 100%;">
+            <mat-label>Message</mat-label>
+            <textarea matInput placeholder="What's on your mind..." rows="6" formControlName='message' name='message'>
+              <mat-hint>Required</mat-hint>
+              <mat-error *ngIf="contactGroup.get('message').hasError('required')">Required</mat-error>
+            </textarea>
+          </mat-form-field>
+        </form>
+        
+        <!-- <form (ngSubmit)="sendEmail" [formGroup]='contactGroup'>
           <br /><br />
           <mat-form-field>
-            <mat-label>Email*</mat-label>
-            <input matInput placeholder="Email required here" [(ngModel)]='contact.email' name="contactEmail">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email required here" formControlName='email' name="email">
+            <mat-hint>Required</mat-hint>
+            <mat-error *ngIf="contactGroup.get('email').hasError('required')">Required</mat-error>
           </mat-form-field>
           <mat-form-field>
             <mat-label>Subject</mat-label>
-            <input matInput placeholder="Enter subject here" [(ngModel)]='contact.subject' name='contactSubject'>
+            <input matInput placeholder="Enter subject here" formControlName='subject' name='subject'>
+            <mat-hint>Required</mat-hint>
+            <mat-error *ngIf="contactGroup.get('subject').hasError('required')">Required</mat-error>
           </mat-form-field>
           <br />
           <mat-form-field class="example-full-width">
             <mat-label>Message</mat-label>
-            <textarea matInput placeholder="Enter message here" [(ngModel)]='contact.message'
-              name='contactMessage'></textarea>
+            <textarea matInput placeholder="Enter message here" formControlName='message' name='message'></textarea>
+            <mat-hint>Required</mat-hint>
+            <mat-error *ngIf="contactGroup.get('message').hasError('required')">Required</mat-error>
           </mat-form-field>
-        </form>
+        </form> -->
       </mat-card-content>
       <mat-card-actions align='end'>
-        <!-- <button disabled='disabled' mat-raised-button color="primary" (click)="sendEmail()">TODO: enable
-          sendEmail
-        </button> -->
+        <button disabled='disabled' mat-raised-button color="primary" (click)="sendEmail()">Send </button>
       </mat-card-actions>
     </mat-card>
   </div>

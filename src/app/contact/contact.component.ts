@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroupDirective, NgForm } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -9,11 +8,15 @@ import { ErrorStateMatcher } from '@angular/material/core';
 })
 export class ContactComponent implements OnInit {
 
-  contact: any = {
-    email:'',
-    subject: '',
-    message: ''
-  };
+  contactGroup = new FormGroup({
+    email: new FormControl('', [Validators.required]),
+    subject: new FormControl('', [Validators.required]),
+    message: new FormControl('', [Validators.required])
+  });
+
+  // email = new FormControl('');
+  // subject = new FormControl('');
+  // message = new FormControl('');
 
 
   constructor() { }
@@ -21,9 +24,9 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // sendEmail() {
-  //   console.log(this.contact)
-  //   // submit email
-  // }
+  sendEmail() {
+    // console.log(this.contactGroup)
+    // submit email
+  }
 }
 

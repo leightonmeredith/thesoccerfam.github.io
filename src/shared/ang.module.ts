@@ -7,12 +7,13 @@ import { MatCardModule } from "@angular/material/card";
 import { MatDialogModule } from "@angular/material/dialog";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from "ngx-owl-carousel-o";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -23,12 +24,14 @@ import { MatListModule } from '@angular/material/list';
     MatGridListModule,
     MatCardModule,
     FormsModule,
+    ReactiveFormsModule,
     MatDialogModule,
     MatSidenavModule,
     MatButtonModule,
     MatTableModule,
     MatToolbarModule,
     MatListModule,
+    MatInputModule,
     MatFormFieldModule,
     CarouselModule,
     HttpClientModule,
