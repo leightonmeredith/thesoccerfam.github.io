@@ -11,14 +11,15 @@ import { HandSetComponent } from 'src/shared/handset.component';
 })
 export class FooterComponent implements OnInit {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+  isHandset$: Observable<boolean>;
+  // isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  //   .pipe(
+  //     map(result => result.matches),
+  //     shareReplay()
+  //   );
 
   constructor(private breakpointObserver: BreakpointObserver, private handsetComponent: HandSetComponent) {
-    // this.isHandset$ = this.handsetComponent.isHandset$;
+    this.isHandset$ = this.handsetComponent.isHandset$;
   }
 
   ngOnInit(): void {
