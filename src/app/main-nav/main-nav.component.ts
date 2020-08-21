@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { HandSetComponent } from 'src/shared/handset.component';
 
 // Create main-nav using ng g @angular/material:material-nav --name=main-nav
 
@@ -12,12 +11,10 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class MainNavComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+  isHandset$: Observable<boolean>;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private handsetComponent: HandSetComponent) {
+    this.isHandset$ = this.handsetComponent.isHandset$;
+  }
 
 }
