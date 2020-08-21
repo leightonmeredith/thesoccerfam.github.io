@@ -7,7 +7,7 @@ export class Common {
     }
 
     static isNullOrEmpty(obj: any[]): boolean {
-        if (this.isNullOrUndefined || obj.length === 0) {
+        if (this.isNullOrUndefined(obj) || obj.length === 0) {
             return true;
         }
         return false;
