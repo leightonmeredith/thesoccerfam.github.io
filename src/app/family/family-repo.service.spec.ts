@@ -8,7 +8,7 @@ import { of } from 'rxjs';
 describe('FamilyRepoService', () => {
   let service: FamilyRepoService;
   let httpTestingController: HttpTestingController;
-  let mockObj = new MockObjects();
+  const mockObj = new MockObjects();
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -59,6 +59,6 @@ describe('FamilyRepoService', () => {
       expect(request.request.method).toEqual('GET');
       request.flush(mockFamily);
       httpTestingController.verify();
-    })
-  })
+    });
+  });
 });

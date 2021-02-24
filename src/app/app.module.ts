@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ContactModule } from './contact/modules/contact.module';
+import { HiddenModule } from './hidden/modules/hidden.module';
 import { AngModule } from 'src/shared/ang.module';
 
 
@@ -29,12 +30,13 @@ import { AngModule } from 'src/shared/ang.module';
     PodcastComponent,
     FamilyComponent,
     LoginComponent,
-    MainNavComponent
+    MainNavComponent,
   ],
   imports: [
     AngModule,
     ContactModule,
     LayoutModule,
+    HiddenModule,
     AppRoutingModule
   ],
   exports: [AngModule],

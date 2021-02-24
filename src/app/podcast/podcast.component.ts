@@ -11,7 +11,7 @@ import { IPodcast } from './podcast.model';
 export class PodcastComponent implements OnInit {
 
   displayedColumns: string[] = ['date', 'time', 'headline', 'desc', 'url'];
-  
+
   podcast$: Observable<IPodcast[]>;
 
   constructor(private podcastRepo: PodcastRepoService) { }

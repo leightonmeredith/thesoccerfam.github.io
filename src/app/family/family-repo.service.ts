@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError, of, BehaviorSubject } from 'rxjs';
-import { tap, catchError } from "rxjs/operators";
+import { tap, catchError } from 'rxjs/operators';
 import { IFamily } from './family.model';
 import { ErrorHandlerService } from 'src/shared/error-handler.service';
 
@@ -28,7 +28,7 @@ export class FamilyRepoService {
       this.family$ = new BehaviorSubject(new Array<IFamily>()) as BehaviorSubject<IFamily[]>;
       this.getAll().subscribe(response => {
         this.family$.next(response);
-      })
+      });
     }
   }
 

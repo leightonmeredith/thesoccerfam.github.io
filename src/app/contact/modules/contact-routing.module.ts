@@ -10,7 +10,7 @@ const routes: Routes = [
     // canActivate: [ContactGuard],
     component: ContactComponent
   }
-]
+];
 
 @NgModule({
   declarations: [],
