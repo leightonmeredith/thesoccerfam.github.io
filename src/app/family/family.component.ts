@@ -35,7 +35,7 @@ export class FamilyComponent implements OnInit {
       740: { items: 3 },
       940: { items: 4 }
     },
-  }
+  };
 
   constructor(private familyRepo: FamilyRepoService) { }
 
@@ -59,6 +59,6 @@ export class FamilyComponent implements OnInit {
   getFamily() {
     this.familyRepo.getAll().subscribe(result => {
       this.family = result;
-    })
+    });
   }
 }

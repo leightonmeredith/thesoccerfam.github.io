@@ -6,7 +6,7 @@ import { MockObjects } from 'src/shared/mock-objects.component';
 
 describe('FamilyComponent', () => {
   let component: FamilyComponent;
-  let mockObj = new MockObjects();
+  const mockObj = new MockObjects();
   let fixture: ComponentFixture<FamilyComponent>;
 
   beforeEach(async(() => {
@@ -31,10 +31,10 @@ describe('FamilyComponent', () => {
     it('should set selectedMember', () => {
       component.family = mockObj.getDefaultFamilies();
       const mockMember = mockObj.getDefaultFamilies()[0];
-      
+
       component.getBio(mockMember);
 
       expect(component.selectedMember).toEqual(mockMember);
-    })
-  })
+    });
+  });
 });

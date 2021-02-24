@@ -17,6 +17,6 @@ export class PodcastRepoService {
   getAll(): Observable<IPodcast[]> {
     return this.http.get<IPodcast[]>(this.url).pipe(
       catchError(this.geh.handleError)
-    )
+    );
   }
 }

@@ -1,1 +1,25 @@
-<p>Coming Soon!</p>
+<div style=" text-align: center; height: 400px;">
+  <span style="
+  font-size: xx-large; color: #036; 
+  font-style: italic;  font-weight: 600;
+  font-family: Chalkduster, fantasy;
+  ">The Soccer Family: Member Login</span>
+
+  <form (ngSubmit)="validateUser()" [formGroup]="loginGroup">
+    <mat-form-field>
+      <mat-label>User Name</mat-label>
+      <input matInput placeholder="Enter Username" formControlName='user'>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName='password'>
+      <span style='cursor: pointer;' mat-icon-button matSuffix (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </span>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary">Login</button>
+  </form>
+</div>

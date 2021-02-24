@@ -17,6 +17,6 @@ describe('ContactGuard', () => {
   describe('canActivate', () => {
     it('should return true', () => {
       guard.canActivate(null, null);
-    })
-  })
+    });
+  });
 });

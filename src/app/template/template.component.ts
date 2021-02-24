@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateComponent implements OnInit {
   title = 'tsf';
-  
+
   constructor() { }
 
   ngOnInit(): void {

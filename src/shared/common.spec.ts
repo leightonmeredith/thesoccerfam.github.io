@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { CommonModule } from '@angular/common';
 import { Common } from './common';
 
 describe('Common', () => {
@@ -30,7 +30,7 @@ describe('Common', () => {
     });
 
     describe('isNullOrUndefined', () => {
-        it('should return true if obj is null', ()=> {
+        it('should return true if obj is null', () => {
             const mockNullObj = null;
             const mockUndefinedObj = undefined;
 
@@ -41,17 +41,17 @@ describe('Common', () => {
             expect(undefinedResult).toBeTruthy();
         });
 
-        it('should return false if obj is not null', ()=> {
+        it('should return false if obj is not null', () => {
             const mockObj = 'test';
 
             const result = Common.isNullOrUndefined(mockObj);
 
             expect(result).toBeFalsy();
         });
-    })
+    });
 
     describe('isNullOrEmpty', () => {
-        it('should return true if obj array is null or empty', ()=> {
+        it('should return true if obj array is null or empty', () => {
             const mockNullObj = null;
             const mockEmptyObj = [];
 
@@ -62,13 +62,13 @@ describe('Common', () => {
             expect(undefinedResult).toBeTruthy();
         });
 
-        it('should return false if obj array is not null', ()=> {
+        it('should return false if obj array is not null', () => {
             const mockObj = ['test'];
 
             const result = Common.isNullOrEmpty(mockObj);
 
             expect(result).toBeFalsy();
         });
-    })
+    });
 
-})
+});
