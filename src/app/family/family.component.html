@@ -3,7 +3,7 @@
   <div *ngIf='family'>
     <owl-carousel-o [options]="customOptions">
       <ng-template *ngFor="let member of family" carouselSlide>
-        <div (click)="getBio(member)" style="max-height: 300px;">
+        <div (click)="getBio(member)" style="max-height: 400px;">
           <img src="{{member.img}}">
         </div>
       </ng-template>
