@@ -33,30 +33,7 @@
               <mat-error *ngIf="contactGroup.get('message').hasError('required')">Required</mat-error>
             </textarea>
           </mat-form-field>
-        </form>
-        
-        <!-- <form (ngSubmit)="sendEmail" [formGroup]='contactGroup'>
-          <br /><br />
-          <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Email required here" formControlName='email' name="email">
-            <mat-hint>Required</mat-hint>
-            <mat-error *ngIf="contactGroup.get('email').hasError('required')">Required</mat-error>
-          </mat-form-field>
-          <mat-form-field>
-            <mat-label>Subject</mat-label>
-            <input matInput placeholder="Enter subject here" formControlName='subject' name='subject'>
-            <mat-hint>Required</mat-hint>
-            <mat-error *ngIf="contactGroup.get('subject').hasError('required')">Required</mat-error>
-          </mat-form-field>
-          <br />
-          <mat-form-field class="example-full-width">
-            <mat-label>Message</mat-label>
-            <textarea matInput placeholder="Enter message here" formControlName='message' name='message'></textarea>
-            <mat-hint>Required</mat-hint>
-            <mat-error *ngIf="contactGroup.get('message').hasError('required')">Required</mat-error>
-          </mat-form-field>
-        </form> -->
+        </form>        
       </mat-card-content>
       <mat-card-actions align='end'>
         <button disabled='disabled' mat-raised-button color="primary" (click)="sendEmail()">Send </button>
