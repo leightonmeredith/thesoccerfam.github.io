@@ -16,6 +16,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { ContactModule } from './contact/modules/contact.module';
 import { HiddenModule } from './hidden/modules/hidden.module';
 import { AngModule } from 'src/shared/ang.module';
+import { PodcComponent } from './podc/podcast.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { AngModule } from 'src/shared/ang.module';
     FamilyComponent,
     LoginComponent,
     MainNavComponent,
+    PodcComponent
   ],
   imports: [
     AngModule,
