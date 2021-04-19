@@ -18,3 +18,5 @@ Run `npm start` to startup the application. Default port is 4200.
 Connect github pages to server instructions [here](https://support.dnsimple.com/articles/github-pages/)
 
 Create CNAME file then run the deploy npm script in package.json 
+
+repo to create episode player on application [here](https://github.com/pedronave/podcaster/commits/0f85a3a371ed1d6b6f3c47581d7fc33cd646aeee)
